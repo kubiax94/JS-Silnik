@@ -6,6 +6,8 @@ import { Collision, CollisionInfo } from '../modules/Collision.js';
 import { Vector2D } from '../modules/Vector2D.js';
 import { QuadTree, AABB, Point } from '../modules/QuadTree.js';
 
+
+//TODO: Napisać stany dla silnika.
 class Frugo {
     constructor() {
         Time.Init();
