@@ -1,13 +1,9 @@
 import { Vector2D } from "./Vector2D.js";
 import { GameObject } from "./GameObjectsManager.js";
 
-// Zamisat urzywać On^2 lepiej jest urzyć Onlogn, czyli poprostu zmiejszamy liczbe iteracji
-// rozkładając je w czasie.
 // Implementcja z https://en.wikipedia.org/wiki/Quadtree;
-// Na razie do wyszukiwania kolizji.
-// Ale pozniej mozna zaimplementowac jak strukture danych dla całego silnika
 
-
+//TODO: Popraw Vector
 // Clasa point będzie przechowyać miejsce obiektu w QuadTree jak i dane;
 // Tylko da struktury QuadTree nie urzywać gdzie indziej.
 
@@ -40,7 +36,6 @@ export class Point {
     }
 }
 
-//Class AABB niby przyjmuje punkt ale nie musi może być to typ vektora2d;
 
 export class AABB {
 
@@ -113,9 +108,9 @@ export class QuadTree {
 
     }
     
-    // Głowny kod rekurencji. Point is Point type.
+    // Głowny kod rekurencji.
     // Przyjmuje obiekt typu Point i "wkłada" go do QuadTree
-    // Point object posiada zmiena typu dane. Dlatego nie mozna używać vektora.
+    // Point object posiada zmienną typu dane. Dlatego nie mozna używać vektora.
 
     insert(point) {
 
